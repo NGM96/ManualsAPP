@@ -1,0 +1,399 @@
+/* Estilos base para móviles */
+:root {
+  --container-padding: 1rem;
+  --max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  padding-top: 60px; /* Espacio para la navegación fija */
+  background-color: #f5f5f5; /* Fondo claro para mejor visibilidad */
+}
+
+/* Nuevos estilos para el header */
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 1000;
+}
+
+.header-logo img {
+    height: 40px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    color: #2c3e50;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.login-btn {
+    background: #2c3e50;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #34495e;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Ajustar el padding-top del body para el nuevo header */
+body {
+    padding-top: 60px;
+}
+
+/* Estilos responsivos para elementos comunes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  display: none;
+  padding-top: 60px; /* Espacio para la navegación fija */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.section.active {
+  display: block;
+}
+
+.manual-container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.manual-navigation {
+  margin: 2rem 0;
+}
+
+.manual-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.main-menu {
+  text-align: center;
+  padding: 2rem;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 400px;
+  margin: 3rem auto;
+}
+
+.btn-main {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+  background: #34495e;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.category-btn {
+  background: #34495e;
+  color: white;
+  padding: 2rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.category-btn:hover {
+  transform: scale(1.05);
+}
+
+.search-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.manual-search .form-group {
+  margin-bottom: 2rem;
+}
+
+.manual-search label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.manual-search input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.manual-search input:focus {
+  outline: none;
+  border-color: #2c3e50;
+}
+
+.manual-search button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.options-container {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.options-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #34495e;
+  color: white;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-option:hover {
+  background: #2c3e50;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.chapters-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.chapter-btn {
+  background: #fff;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.chapter-btn:hover {
+  background: #2c3e50;
+  color: #fff;
+  transform: translateX(10px);
+}
+
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chapter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background: #34495e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  background: #2c3e50;
+}
+
+.btn-icon {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Media queries para tablets y desktop */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+    --max-width: 90%;
+  }
+
+  .manual-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .options-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .btn-option {
+    flex: 1;
+    max-width: 250px;
+  }
+
+  .chapter-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .action-btn {
+    flex: 1;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --max-width: 1200px;
+  }
+}

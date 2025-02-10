@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/mobile.css">
+    <link rel="stylesheet" href="/Styles/navigation.css">
+    <link rel="stylesheet" href="/Styles/Components/forms.css">
+    <link rel="stylesheet" href="/Styles/Components/chapters.css">
+    <title>Bienvenido</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf_viewer.min.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-logo">
+            <img src="/assets/logo.png" alt="Logo Manual">
+        </div>
+        <nav class="header-nav">
+            <button class="nav-btn" data-section="ayuda">
+                <span class="material-icons">help_outline</span>
+                Ayuda
+            </button>
+            <button class="nav-btn" data-section="feedback">
+                <span class="material-icons">feedback</span>
+                Feedback
+            </button>
+            <div class="auth-container">
+                <button class="nav-btn login-btn" data-section="login" id="loginBtn">
+                    <span class="material-icons">login</span>
+                    Login
+                </button>
+                <button class="nav-btn user-avatar hidden" id="userAvatar">
+                    <span class="avatar-circle">JD</span>
+                    <span class="user-name">John Doe</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menú Principal -->
+    <section id="home" class="section active">
+        <div class="main-menu">
+            <h1>Bienvenido</h1>
+            <div class="menu-buttons">
+                <button class="btn btn-main" data-section="manuales">Manuales</button>
+                <button class="btn btn-main" data-section="proyecto">Tu Proyecto</button>
+                <button class="btn btn-main" data-section="blog">Blog</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Manuales (Búsqueda) -->
+    <section id="manuales" class="section">
+        <header class="section-header">
+            <button class="btn-back" data-section="home">←</button>
+            <h2>Buscar Manual</h2>
+        </header>
+        <div class="search-form">
+            <form class="manual-search" id="searchForm">
+                <div class="form-group">
+                    <label for="marca">Ingrese marca</label>
+                    <input type="text" id="marca" name="marca" placeholder="Ej: Ford" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Ingrese modelo</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Ej: Fairlane" required>
+                </div>
+                <button type="submit" class="btn btn-main">Buscar Manual</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección Capítulos -->
+    <section id="capitulos" class="section">
+        <header class="section-header">
+            <button class="btn-back" data-section="manuales">←</button>
+            <h2>Capítulos Disponibles</h2>
+        </header>
+        <div id="dynamic-chapters-list" class="chapters-list">
+            <!-- Los capítulos se cargarán dinámicamente aquí -->
+        </div>
+    </section>
+
+    <!-- Sección Capítulo Individual -->
+    <section id="capitulo-individual" class="section chapter-content">
+        <header class="section-header">
+            <button class="btn-back" data-section="capitulos">←</button>
+            <h2 id="chapter-title"><!-- El título se insertará dinámicamente --></h2>
+        </header>
+        <div class="chapter-actions">
+            <button class="action-btn" data-action="ver">
+                <span class="btn-icon">📖</span>
+                Ver Capítulo
+            </button>
+            <button class="action-btn" data-action="consulta">
+                <span class="btn-icon">❓</span>
+                Realizar Consulta
+            </button>
+            <button class="action-btn" data-action="historial">
+                <span class="btn-icon">📋</span>
+                Ver Consultas Realizadas
+            </button>
+        </div>
+    </section>
+
+    <script src="navigation.js"></script>
+</body>
+</html>
